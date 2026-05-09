@@ -130,6 +130,13 @@ ul {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo i {
+    color: var(--accent);
 }
 
 .logo span {
@@ -341,22 +348,42 @@ ul {
 .hero-contact {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.hero-contact a {
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     color: var(--text-secondary);
+    font-size: 1rem;
     transition: var(--transition);
 }
 
-.hero-contact a:hover {
+.contact-item i {
     color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.contact-item:hover {
+    color: var(--text-primary);
 }
 
 .divider {
-    opacity: 0.5;
+    color: var(--text-muted);
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.location i {
+    color: var(--accent-secondary);
 }
 
 /* Sections */
@@ -401,7 +428,7 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -435,6 +462,7 @@ section {
 .skill-icon {
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: var(--accent);
 }
 
 .skill-card h3 {
@@ -443,26 +471,65 @@ section {
     margin-bottom: 0.75rem;
 }
 
-.skill-card p {
+.skill-card > p {
     color: var(--text-muted);
     font-size: 0.9rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
 }
 
-.skill-tags {
+/* Skill Bars */
+.skill-bars {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.85rem;
 }
 
-.skill-tags span {
-    padding: 0.4rem 0.75rem;
-    background: rgba(99, 102, 241, 0.1);
-    border-radius: 6px;
+.skill-bar {
+    width: 100%;
+}
+
+.skill-bar .bar-fill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.skill-bar .bar-fill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    height: 100%;
+    background: var(--gradient-1);
+    border-radius: 8px;
+    transition: width 1s ease;
+    z-index: 0;
+}
+
+.skill-bar .bar-fill span {
+    position: relative;
+    z-index: 1;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.skill-bar .bar-fill span:last-child {
     font-size: 0.8rem;
     color: var(--accent);
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.skill-card:hover .bar-fill::before {
+    width: var(--width);
 }
 
 /* Experience Section */
@@ -552,6 +619,9 @@ section {
     border-radius: 6px;
     font-size: 0.85rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .period {
@@ -569,6 +639,9 @@ section {
     color: var(--text-muted);
     font-size: 0.9rem;
     margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .achievements-list {
@@ -600,11 +673,18 @@ section {
 }
 
 .tech-stack span {
-    padding: 0.3rem 0.6rem;
+    padding: 0.4rem 0.75rem;
     background: var(--bg-tertiary);
-    border-radius: 4px;
-    font-size: 0.75rem;
-    color: var(--text-muted);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.tech-stack span i {
+    color: var(--accent);
 }
 
 /* Education Section */
@@ -640,6 +720,7 @@ section {
 .education-icon {
     font-size: 3rem;
     flex-shrink: 0;
+    color: var(--accent);
 }
 
 .education-content {
@@ -652,21 +733,25 @@ section {
     margin-bottom: 0.5rem;
 }
 
+.education-content .college,
+.education-content .degree-details,
+.education-content .period {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
 .education-content .college {
     color: var(--accent);
     font-weight: 500;
-    margin-bottom: 0.25rem;
 }
 
-.education-content .degree-details {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
-}
-
-.education-content .period {
-    color: var(--text-muted);
-    font-size: 0.9rem;
+.education-content i {
+    color: var(--accent);
+    font-size: 0.85rem;
 }
 
 .education-gpa {
@@ -745,15 +830,16 @@ section {
     transform: translateY(-3px);
 }
 
-.card-icon {
-    width: 48px;
-    height: 48px;
+.contact-card .card-icon {
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-tertiary);
+    background: var(--gradient-1);
     border-radius: 12px;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+    flex-shrink: 0;
 }
 
 .card-text {
@@ -770,9 +856,10 @@ section {
 }
 
 .card-value {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-primary);
     font-weight: 500;
+    line-height: 1.3;
 }
 
 /* Footer */
@@ -780,9 +867,45 @@ section {
     background: var(--bg-secondary);
     border-top: 1px solid var(--border);
     padding: 2rem;
-    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-content p {
     color: var(--text-muted);
     font-size: 0.9rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+    border-radius: 10px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--accent);
+    color: var(--text-primary);
+    transform: translateY(-3px);
 }
 
 /* Animations */
@@ -905,8 +1028,8 @@ section {
 
     .hero-contact {
         flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
+        align-items: flex-start;
+        gap: 1rem;
     }
 
     .divider {
@@ -919,6 +1042,22 @@ section {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skill-bars {
+        gap: 0.6rem;
+    }
+
+    .skill-bar .bar-fill {
+        padding: 0.6rem 0.85rem;
+    }
+
+    .skill-bar .bar-fill span {
+        font-size: 0.8rem;
+    }
+
+    .skill-bar .bar-fill span:last-child {
+        font-size: 0.7rem;
     }
 
     .timeline {
@@ -948,12 +1087,33 @@ section {
         text-align: center;
     }
 
+    .education-content .college,
+    .education-content .degree-details,
+    .education-content .period {
+        justify-content: center;
+    }
+
     .education-gpa {
         width: 100%;
     }
 
     .contact-links {
         grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 1.25rem;
+    }
+
+    .contact-card .card-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
@@ -980,5 +1140,9 @@ section {
     .btn {
         padding: 0.85rem 1.5rem;
         font-size: 0.95rem;
+    }
+
+    .skill-card {
+        padding: 1.5rem;
     }
 }

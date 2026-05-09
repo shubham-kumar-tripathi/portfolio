@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Shubham Kumar Tripathi - Software Development Engineer with 2+ years of experience in Java, Spring Boot, AWS, MongoDB, microservices. Building scalable enterprise applications.">
+    <meta name="keywords" content="Software Engineer, Java Developer, Spring Boot, AWS, MongoDB, Microservices, Backend Developer, Full Stack Developer, India">
+    <meta name="author" content="Shubham Kumar Tripathi">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0b">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shubham-tripathi.website/">
+    <meta property="og:title" content="Shubham Kumar Tripathi | Software Development Engineer">
+    <meta property="og:description" content="Building enterprise-grade backend systems with 2+ years of experience in Java, Spring Boot, and cloud-native architecture.">
+    <meta property="og:image" content="https://shubham-tripathi.website/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shubham-tripathi.website/">
+    <meta property="twitter:title" content="Shubham Kumar Tripathi | Software Development Engineer">
+    <meta property="twitter:description" content="Building enterprise-grade backend systems with 2+ years of experience in Java, Spring Boot, and cloud-native architecture.">
+    
     <title>Shubham Kumar Tripathi | Software Engineer</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 </head>
 <body>
     <div class="bg-canvas">
@@ -18,7 +44,7 @@
 
     <header class="header">
         <nav class="nav-container">
-            <a href="#" class="logo">Shubham<span>.</span></a>
+            <a href="#" class="logo"><i class="fas fa-code"></i> Shubham<span>.</span></a>
             <button class="menu-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -65,9 +91,16 @@
                     <a href="#experience" class="btn btn-outline">View Work</a>
                 </div>
                 <div class="hero-contact animate-fade-in" style="animation-delay: 0.5s">
-                    <a href="mailto:shubham.tripathi68225@gmail.com">shubham.tripathi68225@gmail.com</a>
-                    <span class="divider">•</span>
-                    <span>Noida, India</span>
+                    <a href="mailto:shubham.tripathi68225@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>shubham.tripathi68225@gmail.com</span>
+                    </a>
+                    <a href="tel:+917565068357" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 7565068357</span>
+                    </a>
+                    <span class="divider">|</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Noida, India</span>
                 </div>
             </div>
         </section>
@@ -79,46 +112,63 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-card" style="--delay: 0">
-                    <div class="skill-icon">☕</div>
+                    <div class="skill-icon"><i class="fab fa-java"></i></div>
                     <h3>Languages & Frameworks</h3>
                     <p>Java ecosystem with modern frameworks for building scalable applications</p>
-                    <div class="skill-tags">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>Spring MVC</span>
-                        <span>Microservices</span>
+                    <div class="skill-bars">
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 95%"><span>Java</span><span>95%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 90%"><span>Spring Boot</span><span>90%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 85%"><span>Microservices</span><span>85%</span></div></div>
                     </div>
                 </div>
                 <div class="skill-card" style="--delay: 1">
-                    <div class="skill-icon">🔌</div>
+                    <div class="skill-icon"><i class="fas fa-plug"></i></div>
                     <h3>Backend & APIs</h3>
                     <p>Designing robust RESTful APIs and microservices architecture</p>
-                    <div class="skill-tags">
-                        <span>REST APIs</span>
-                        <span>Swagger</span>
-                        <span>JWT</span>
-                        <span>API Gateway</span>
+                    <div class="skill-bars">
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 92%"><span>REST APIs</span><span>92%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 88%"><span>AWS API Gateway</span><span>88%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 85%"><span>JWT/Swagger</span><span>85%</span></div></div>
                     </div>
                 </div>
                 <div class="skill-card" style="--delay: 2">
-                    <div class="skill-icon">💾</div>
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
                     <h3>Databases</h3>
                     <p>NoSQL databases with performance optimization</p>
-                    <div class="skill-tags">
-                        <span>MongoDB</span>
-                        <span>Redis</span>
-                        <span>Query Opt</span>
+                    <div class="skill-bars">
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 90%"><span>MongoDB</span><span>90%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 85%"><span>Redis</span><span>85%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 80%"><span>Query Opt</span><span>80%</span></div></div>
                     </div>
                 </div>
                 <div class="skill-card" style="--delay: 3">
-                    <div class="skill-icon">☁️</div>
+                    <div class="skill-icon"><i class="fab fa-aws"></i></div>
                     <h3>Cloud & DevOps</h3>
                     <p>Cloud infrastructure and CI/CD pipelines</p>
-                    <div class="skill-tags">
-                        <span>AWS</span>
-                        <span>Docker</span>
-                        <span>Jenkins</span>
-                        <span>Kafka</span>
+                    <div class="skill-bars">
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 88%"><span>AWS (EC2, S3, SQS)</span><span>88%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 80%"><span>Docker</span><span>80%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 82%"><span>CI/CD (Jenkins)</span><span>82%</span></div></div>
+                    </div>
+                </div>
+                <div class="skill-card" style="--delay: 4">
+                    <div class="skill-icon"><i class="fas fa-vial"></i></div>
+                    <h3>Testing</h3>
+                    <p>Quality assurance and test-driven development</p>
+                    <div class="skill-bars">
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 85%"><span>JUnit</span><span>85%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 78%"><span>JMeter</span><span>78%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 80%"><span>Postman</span><span>80%</span></div></div>
+                    </div>
+                </div>
+                <div class="skill-card" style="--delay: 5">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools & Methods</h3>
+                    <p>Development tools and agile methodologies</p>
+                    <div class="skill-bars">
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 90%"><span>Git</span><span>90%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 85%"><span>IntelliJ IDEA</span><span>85%</span></div></div>
+                        <div class="skill-bar"><div class="bar-fill" style="--width: 82%"><span>Agile/Scrum</span><span>82%</span></div></div>
                     </div>
                 </div>
             </div>
@@ -135,11 +185,11 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
                         <div class="timeline-header">
-                            <div class="company-badge">Saltoris</div>
+                            <div class="company-badge"><i class="fas fa-building"></i> Saltoris</div>
                             <span class="period">Nov 2023 - Present</span>
                         </div>
                         <h3>Software Developer</h3>
-                        <p class="location">Noida, UP</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Noida, UP</p>
                         <ul class="achievements-list">
                             <li>Built Nagpur Jal Grahak Seva App — water utility platform serving 450K+ consumers</li>
                             <li>Designed 200+ REST APIs with Spring Boot & MongoDB handling 25K+ daily transactions at 99.5%+ success rate</li>
@@ -148,11 +198,11 @@
                             <li>Maintained 99.9% uptime on AWS EC2 with CI/CD pipelines</li>
                         </ul>
                         <div class="tech-stack">
-                            <span>Java</span>
-                            <span>Spring Boot</span>
-                            <span>MongoDB</span>
-                            <span>Redis</span>
-                            <span>AWS</span>
+                            <span><i class="fab fa-java"></i> Java</span>
+                            <span><i class="fas fa-leaf"></i> Spring Boot</span>
+                            <span><i class="fas fa-database"></i> MongoDB</span>
+                            <span><i class="fas fa-server"></i> Redis</span>
+                            <span><i class="fab fa-aws"></i> AWS</span>
                         </div>
                     </div>
                 </div>
@@ -161,11 +211,11 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
                         <div class="timeline-header">
-                            <div class="company-badge">Godspeed</div>
+                            <div class="company-badge"><i class="fas fa-rocket"></i> Godspeed</div>
                             <span class="period">Jul 2023 - Oct 2023</span>
                         </div>
                         <h3>Software Developer Intern</h3>
-                        <p class="location">Dharamshala, HP</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Dharamshala, HP</p>
                         <ul class="achievements-list">
                             <li>Developed backend REST APIs using Java, Spring Boot, MongoDB</li>
                             <li>Collaborated in Agile sprints with version control via Git</li>
@@ -177,11 +227,11 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
                         <div class="timeline-header">
-                            <div class="company-badge">Streamkast</div>
+                            <div class="company-badge"><i class="fas fa-globe"></i> Streamkast</div>
                             <span class="period">May 2021 - Jul 2021</span>
                         </div>
                         <h3>Web Development Intern</h3>
-                        <p class="location">Remote</p>
+                        <p class="location"><i class="fas fa-laptop-house"></i> Remote</p>
                         <ul class="achievements-list">
                             <li>Cross-browser testing improved release cycles by 20%</li>
                             <li>Resolved 50+ bugs improving web stability by 40%</li>
@@ -197,12 +247,12 @@
                 <h2 class="section-title">Education</h2>
             </div>
             <div class="education-card">
-                <div class="education-icon">🎓</div>
+                <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
                 <div class="education-content">
                     <h3>Bachelor of Technology</h3>
-                    <p class="college">Lakshmi Narain College of Technology</p>
-                    <p class="degree-details">Electrical Engineering • Bhopal, MP</p>
-                    <p class="period">2019 - 2023</p>
+                    <p class="college"><i class="fas fa-university"></i> Lakshmi Narain College of Technology</p>
+                    <p class="degree-details"><i class="fas fa-bolt"></i> Electrical Engineering • Bhopal, MP</p>
+                    <p class="period"><i class="fas fa-calendar-alt"></i> 2019 - 2023</p>
                 </div>
                 <div class="education-gpa">
                     <span class="gpa-value">8.43</span>
@@ -218,28 +268,28 @@
                 <p>I'm always open to discussing new opportunities, projects, or just to say hello.</p>
                 <div class="contact-links">
                     <a href="mailto:shubham.tripathi68225@gmail.com" class="contact-card">
-                        <span class="card-icon">✉</span>
+                        <div class="card-icon"><i class="fas fa-envelope"></i></div>
                         <div class="card-text">
                             <span class="card-label">Email</span>
-                            <span class="card-value">shubham.tripathi68225@gmail.com</span>
+                            <span class="card-value">shubham.tripathi68225<br>@gmail.com</span>
                         </div>
                     </a>
                     <a href="https://linkedin.com/in/shubham-kumar-tripathi" target="_blank" class="contact-card">
-                        <span class="card-icon">in</span>
+                        <div class="card-icon"><i class="fab fa-linkedin"></i></div>
                         <div class="card-text">
                             <span class="card-label">LinkedIn</span>
                             <span class="card-value">shubham-kumar-tripathi</span>
                         </div>
                     </a>
                     <a href="https://github.com/shubham-kumar-tripathi" target="_blank" class="contact-card">
-                        <span class="card-icon">⌘</span>
+                        <div class="card-icon"><i class="fab fa-github"></i></div>
                         <div class="card-text">
                             <span class="card-label">GitHub</span>
                             <span class="card-value">shubham-kumar-tripathi</span>
                         </div>
                     </a>
                     <a href="tel:+917565068357" class="contact-card">
-                        <span class="card-icon">📱</span>
+                        <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
                         <div class="card-text">
                             <span class="card-label">Phone</span>
                             <span class="card-value">+91 7565068357</span>
@@ -251,7 +301,14 @@
     </main>
 
     <footer class="footer">
-        <p>© 2024 Shubham Kumar Tripathi. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 Shubham Kumar Tripathi. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="mailto:shubham.tripathi68225@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/shubham-kumar-tripathi" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shubham-kumar-tripathi" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
