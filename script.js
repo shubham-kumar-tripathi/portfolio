@@ -1,37 +1,44 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const siteNav = document.querySelector('.site-nav');
-const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
-const sections = document.querySelectorAll('main section[id]');
-
-if (menuToggle && siteNav) {
-    menuToggle.addEventListener('click', () => {
-        const isOpen = siteNav.classList.toggle('is-open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-    });
-}
-
-navLinks.forEach(link => {
+document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-        if (siteNav) siteNav.classList.remove('is-open');
-        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+        document.querySelector('.nav-menu').classList.remove('active');
     });
 });
 
-const sectionObserver = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            const id = entry.target.getAttribute('id');
-            const targetLink = document.querySelector(`.site-nav a[href="#${id}"]`);
-            
-            if (!targetLink) return;
-            
-            if (entry.isIntersecting) {
-                navLinks.forEach(link => link.classList.remove('is-active'));
-                targetLink.classList.add('is-active');
-            }
-        });
-    },
-    { rootMargin: '-30% 0px -50% 0px', threshold: 0 }
-);
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-sections.forEach(section => sectionObserver.observe(section));
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Active section tracking
+const sections = document.querySelectorAll('main section[id]');
+const navLinks = document.querySelectorAll('.nav-menu a');
+
+const observerOptions = {
+    rootMargin: '-20% 0px -60% 0px',
+    threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            
+            navLinks.forEach(link => {
+                link.classList.remove('is-active');
+            });
+            
+            const activeLink = document.querySelector('.nav-menu a[href="#' + id + '"]');
+            if (activeLink) {
+                activeLink.classList.add('is-active');
+            }
+        }
+    });
+}, observerOptions);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
