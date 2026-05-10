@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Shubham Tripathi - Backend Engineer</ShortName>
+  <Description>Backend Engineer &amp; Java Developer Portfolio - Search for Shubham Tripathi</Description>
+  <Url type="text/html" template="https://shubham-tripathi.website/?q={searchTerms}"/>
+</OpenSearchDescription>
