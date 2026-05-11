@@ -749,6 +749,88 @@ a {
     box-shadow: 0 12px 35px rgba(0,0,0,0.1);
 }
 
+[data-theme="dark"] .timeline-content {
+    background: #252536;
+    border-color: #3a3a4a;
+}
+
+[data-theme="dark"] .timeline-content:hover {
+    border-color: #74b9ff;
+    box-shadow: 0 12px 35px rgba(116, 185, 255, 0.1);
+}
+
+[data-theme="dark"] .timeline-summary {
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .timeline-points li {
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .timeline-header .company {
+    color: #74b9ff;
+}
+
+[data-theme="dark"] .timeline-header .period {
+    color: #8a8a8a;
+}
+
+[data-theme="dark"] .timeline-points li::before {
+    color: #74b9ff;
+}
+
+[data-theme="dark"] .education-card {
+    background: #252536;
+    border-color: #3a3a4a;
+}
+
+[data-theme="dark"] .education-card:hover {
+    border-color: #74b9ff;
+    box-shadow: 0 15px 35px rgba(116, 185, 255, 0.1);
+}
+
+[data-theme="dark"] .education-card h3 {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .education-card .college {
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .education-info span {
+    background: #1a1a2e;
+    color: #a0a0a0;
+    border: 1px solid #3a3a4a;
+}
+
+[data-theme="dark"] .education-info .gpa {
+    background: rgba(116, 185, 255, 0.15);
+    color: #74b9ff;
+}
+
+[data-theme="dark"] .strengths-list li {
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .strengths-list li::before {
+    color: #74b9ff;
+}
+
+[data-theme="dark"] .contact-link strong {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .footer {
+    background: #0f0f1a;
+    color: #8a8a8a;
+}
+
+[data-theme="dark"] .footer span {
+    color: #74b9ff;
+}
+
+[data-theme="dark"] .faq-grid {
+
 .timeline-header {
     display: flex;
     justify-content: space-between;
@@ -835,6 +917,22 @@ a {
     color: var(--white);
 }
 
+[data-theme="dark"] .tech-tags span {
+    background: #252536;
+    border-color: #3a3a4a;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .tech-tags span:hover {
+    background: #74b9ff;
+    border-color: #74b9ff;
+    color: #1a1a2e;
+}
+
+[data-theme="dark"] .tech-tags span:hover i {
+    color: #1a1a2e;
+}
+
 /* Project Cards with 3D Effect */
 .projects-grid {
     display: grid;
@@ -867,7 +965,7 @@ a {
 .project-icon {
     width: 55px;
     height: 55px;
-    background: linear-gradient(135deg, var(--accent), #00cec9);
+    background: linear-gradient(135deg, var(--accent), #00b894);
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -876,6 +974,28 @@ a {
     font-size: 1.4rem;
     margin-bottom: 1.25rem;
     transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .project-card {
+    background: #252536;
+    border-color: #3a3a4a;
+}
+
+[data-theme="dark"] .project-card:hover {
+    border-color: #74b9ff;
+    box-shadow: 0 25px 50px rgba(116, 185, 255, 0.15);
+}
+
+[data-theme="dark"] .project-card h3 {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .project-card p {
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .project-card ul li {
+    color: #a0a0a0;
 }
 
 .project-card:hover .project-icon {
@@ -1002,6 +1122,36 @@ a {
 
 .skill-chips span:hover i {
     color: var(--white);
+}
+
+[data-theme="dark"] .skill-category {
+    background: #252536;
+    border-color: #3a3a4a;
+}
+
+[data-theme="dark"] .skill-category h3 {
+    color: #e0e0e0;
+    border-bottom-color: #74b9ff;
+}
+
+[data-theme="dark"] .skill-category h3 i {
+    color: #74b9ff;
+}
+
+[data-theme="dark"] .skill-chips span {
+    background: #1a1a2e;
+    border-color: #3a3a4a;
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .skill-chips span:hover {
+    background: #74b9ff;
+    border-color: #74b9ff;
+    color: #1a1a2e;
+}
+
+[data-theme="dark"] .skill-chips span:hover i {
+    color: #1a1a2e;
 }
 
 /* Education */
@@ -1140,6 +1290,24 @@ a {
     font-size: 0.9rem;
     line-height: 1.6;
     padding-left: 32px;
+}
+
+[data-theme="dark"] .faq-item {
+    background: #252536;
+    border-color: #3a3a4a;
+}
+
+[data-theme="dark"] .faq-item:hover {
+    border-color: #74b9ff;
+    box-shadow: 0 12px 30px rgba(116, 185, 255, 0.12);
+}
+
+[data-theme="dark"] .faq-item h3 {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .faq-item p {
+    color: #a0a0a0;
 }
 
 @media (max-width: 768px) {
