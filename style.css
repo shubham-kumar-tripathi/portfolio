@@ -190,6 +190,45 @@ a {
     position: relative;
 }
 
+[data-theme="dark"] .logo {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .logo span {
+    color: #74b9ff;
+}
+
+[data-theme="dark"] .nav-menu a {
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .nav-menu a:hover {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .nav-menu a.is-active {
+    color: #74b9ff;
+}
+
+[data-theme="dark"] .nav-cta {
+    background: #74b9ff;
+    color: #1a1a2e !important;
+}
+
+[data-theme="dark"] .nav-cta:hover {
+    box-shadow: 0 5px 15px rgba(116, 185, 255, 0.4);
+}
+
+[data-theme="dark"] .menu-toggle {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: #252536;
+    border-color: #3a3a4a;
+    color: #74b9ff;
+}
+
 .nav-menu a.is-active::after {
     content: '';
     position: absolute;
@@ -249,8 +288,8 @@ a {
 /* Hero Section with subtle gradient */
 .hero {
     padding: 140px 20px 60px;
-    background: 
-        linear-gradient(135deg, #f8f9fa 0%, #f0f0f0 50%, #f5f5f5 100%);
+    background:
+        linear-gradient(135deg, var(--bg-light) 0%, var(--bg-cream) 50%, var(--bg-light) 100%);
     min-height: 100vh;
     position: relative;
     overflow: hidden;
@@ -278,6 +317,86 @@ a {
     background: radial-gradient(circle, rgba(45, 52, 54, 0.06) 0%, transparent 70%);
     border-radius: 50%;
     animation: pulse 8s ease-in-out infinite reverse;
+}
+
+[data-theme="dark"] .hero {
+    background:
+        linear-gradient(135deg, #1a1a2e 0%, #141425 50%, #1a1a2e 100%);
+}
+
+[data-theme="dark"] .hero::before {
+    background: radial-gradient(circle, rgba(116, 185, 255, 0.1) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .hero::after {
+    background: radial-gradient(circle, rgba(116, 185, 255, 0.05) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .profile-img-wrapper {
+    box-shadow: var(--shadow), 0 20px 40px rgba(0,0,0,0.4);
+    border: 1px solid var(--border);
+}
+
+[data-theme="dark"] .hero-label {
+    color: #74b9ff;
+}
+
+[data-theme="dark"] .hero h1 {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .hero-subtitle {
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .hero-desc {
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .hero-contact a,
+[data-theme="dark"] .hero-contact span {
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .hero-contact i {
+    color: #74b9ff;
+}
+
+[data-theme="dark"] .hero-buttons {
+    flex-wrap: wrap;
+}
+
+[data-theme="dark"] .btn-primary {
+    background: linear-gradient(135deg, #0984e3, #00cec9);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(9, 132, 227, 0.4);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    box-shadow: 0 8px 25px rgba(9, 132, 227, 0.5);
+}
+
+[data-theme="dark"] .btn-outline {
+    background: transparent;
+    color: #74b9ff;
+    border: 2px solid #74b9ff;
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background: #74b9ff;
+    color: #1a1a2e;
+}
+
+[data-theme="dark"] .btn-download {
+    background: transparent;
+    color: #74b9ff;
+    border: 2px solid #74b9ff;
+}
+
+[data-theme="dark"] .btn-download:hover {
+    background: #74b9ff;
+    color: #1a1a2e;
+    box-shadow: 0 8px 25px rgba(116, 185, 255, 0.3);
 }
 
 .hero-wrapper {
@@ -451,7 +570,7 @@ a {
 
 /* Stats Section */
 .stats-section {
-    background: var(--white);
+    background: var(--bg-light);
     padding: 2rem 0;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
@@ -502,6 +621,20 @@ a {
     color: var(--text-light);
 }
 
+[data-theme="dark"] .stat-box {
+    background: #252536;
+    border-color: #3a3a4a;
+}
+
+[data-theme="dark"] .stat-box:hover {
+    border-color: #74b9ff;
+    box-shadow: 0 15px 35px rgba(116, 185, 255, 0.15);
+}
+
+[data-theme="dark"] .stat-box:hover strong {
+    color: #74b9ff;
+}
+
 /* Sections */
 .section {
     padding: 80px 20px;
@@ -510,6 +643,22 @@ a {
 
 .section-alt {
     background: var(--bg-cream);
+}
+
+[data-theme="dark"] .section {
+    background: #1a1a2e;
+}
+
+[data-theme="dark"] .section-alt {
+    background: #141425;
+}
+
+[data-theme="dark"] .section-header h2 {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .section-label {
+    color: #74b9ff;
 }
 
 .section-header {
